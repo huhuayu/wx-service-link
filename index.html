@@ -2,45 +2,68 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>售后客服</title>
-    <!-- 防淘宝屏蔽核心配置 -->
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="referrer" content="never">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>专属客服</title>
     <style>
-        /* 页面样式优化，客户体验更好 */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* 全局样式重置，适配所有手机 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            background: #f5f7fa;
-            font-family: "微软雅黑", sans-serif;
+            background-color: #f5f7fa;
+            font-family: "微软雅黑", "PingFang SC", sans-serif;
+            padding: 20px;
             text-align: center;
-            padding: 0 20px;
-            margin-top: 60px;
         }
-        .title { color: #333; font-size: 20px; margin-bottom: 20px; }
-        .desc { color: #666; font-size: 16px; margin-bottom: 30px; }
-        /* 核心按钮，强制触发跳转 */
-        .add-btn {
-            display: inline-block;
-            padding: 16px 45px;
-            background: #07c160;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 18px;
+        /* 引导文案样式 */
+        .title {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
             font-weight: bold;
-            box-shadow: 0 4px 12px rgba(7, 193, 96, 0.3);
         }
-        .add-btn:hover { background: #06b058; }
+        .desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        /* 二维码容器，居中+自适应大小 */
+        .qrcode-container {
+            width: 80%;
+            max-width: 300px;
+            margin: 0 auto;
+            border: 5px solid white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        /* 二维码图片自适应 */
+        .qrcode-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* 底部提示文案 */
+        .tips {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #999;
+        }
     </style>
 </head>
 <body>
+    <!-- 引导文案 -->
     <h2 class="title">专属售后客服</h2>
-    <p class="desc">点击下方按钮，一键添加企业微信客服</p>
-    <!-- 你的企业微信链接，已替换好 -->
-    <a href="https://work.weixin.qq.com/ct/wcde60dba8ddd9d8d7d2db4db9d934142744" class="add-btn" target="_blank" rel="noopener noreferrer">
-        立即添加客服
-    </a>
+    <p class="desc">扫码添加企业微信，一对一解决问题</p>
+    
+    <!-- 二维码展示（替换成你的图片链接） -->
+    <div class="qrcode-container">
+        <img src="https://github.com/huhuayu/wx-service-link/blob/main/3fb4bc82cb0b7ff7c5c3affc263e1b9c.png" alt="客服企业微信二维码" class="qrcode-img">
+    </div>
+    
+    <!-- 底部提示 -->
+    <p class="tips">微信扫码 → 点击「添加到通讯录」即可</p>
 </body>
 </html>
